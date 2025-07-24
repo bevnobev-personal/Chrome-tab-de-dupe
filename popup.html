@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab DeDupe</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Onboarding Screen -->
+        <div id="onboarding" class="screen hidden">
+            <div class="onboarding-content">
+                <div class="logo">
+                    <div class="logo-icon">🌸</div>
+                    <h1>Tab DeDupe</h1>
+                </div>
+                <div class="welcome-text">
+                    <h2>Welcome to Tab DeDupe!</h2>
+                    <p>Find and close duplicate tabs across all your Chrome windows.</p>
+                    <div class="privacy-note">
+                        <span class="privacy-icon">🔒</span>
+                        <span>All processing happens locally - your data never leaves your device</span>
+                    </div>
+                </div>
+                <div class="onboarding-actions">
+                    <button id="start-btn" class="primary-btn">Get Started</button>
+                    <button id="skip-onboarding" class="secondary-btn">Skip</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Screen -->
+        <div id="main" class="screen">
+            <div class="header">
+                <div class="logo-small">
+                    <span class="logo-icon">🌸</span>
+                    <span class="logo-text">Tab DeDupe</span>
+                </div>
+                <button id="help-btn" class="help-btn" title="Show onboarding">?</button>
+            </div>
+
+            <!-- Scanning State -->
+            <div id="scanning" class="state hidden">
+                <div class="scanning-animation">
+                    <div class="spinner"></div>
+                    <p>Scanning for duplicate tabs...</p>
+                </div>
+            </div>
+
+            <!-- No Duplicates State -->
+            <div id="no-duplicates" class="state hidden">
+                <div class="no-duplicates-content">
+                    <div class="celebration-icon">✨</div>
+                    <h2>All Clear!</h2>
+                    <p>No duplicate tabs found. Your browser is perfectly organized!</p>
+                    <button id="scan-again-btn" class="primary-btn">Scan Again</button>
+                </div>
+            </div>
+
+            <!-- Duplicates Found State -->
+            <div id="duplicates-found" class="state hidden">
+                <div class="duplicates-header">
+                    <h2>Duplicate Tabs Found</h2>
+                    <p id="duplicates-summary"></p>
+                </div>
+
+                <div id="duplicate-groups" class="duplicate-groups">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+
+                <div class="actions">
+                    <button id="close-selected-btn" class="primary-btn" disabled>Close Selected Tabs</button>
+                    <button id="cancel-btn" class="secondary-btn">Cancel</button>
+                </div>
+            </div>
+
+            <!-- Success State -->
+            <div id="success" class="state hidden">
+                <div class="success-content">
+                    <div class="success-icon">🎉</div>
+                    <h2>Tabs Closed!</h2>
+                    <p id="success-message"></p>
+                    <div class="success-actions">
+                        <button id="undo-btn" class="primary-btn">Undo</button>
+                        <button id="done-btn" class="secondary-btn">Done</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recently Closed Section -->
+            <div id="recently-closed-section" class="section hidden">
+                <div class="section-header">
+                    <h3>Recently Closed</h3>
+                    <button id="clear-recent-btn" class="clear-btn">Clear</button>
+                </div>
+                <div id="recently-closed-list" class="recently-closed-list">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

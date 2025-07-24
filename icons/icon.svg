@@ -1,0 +1,23 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pinkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff69b4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff1493;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="56" fill="url(#pinkGradient)" stroke="#c1477c" stroke-width="4"/>
+  <g transform="translate(64,64)">
+    <!-- Flower petals -->
+    <ellipse cx="0" cy="-30" rx="8" ry="20" fill="#ffffff" opacity="0.9" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-30" rx="8" ry="20" fill="#ffffff" opacity="0.9" transform="rotate(45)"/>
+    <ellipse cx="0" cy="-30" rx="8" ry="20" fill="#ffffff" opacity="0.9" transform="rotate(90)"/>
+    <ellipse cx="0" cy="-30" rx="8" ry="20" fill="#ffffff" opacity="0.9" transform="rotate(135)"/>
+    <ellipse cx="0" cy="-30" rx="8" ry="20" fill="#ffffff" opacity="0.9" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-30" rx="8" ry="20" fill="#ffffff" opacity="0.9" transform="rotate(225)"/>
+    <ellipse cx="0" cy="-30" rx="8" ry="20" fill="#ffffff" opacity="0.9" transform="rotate(270)"/>
+    <ellipse cx="0" cy="-30" rx="8" ry="20" fill="#ffffff" opacity="0.9" transform="rotate(315)"/>
+    <!-- Center -->
+    <circle cx="0" cy="0" r="12" fill="#ffb6c1"/>
+    <circle cx="0" cy="0" r="6" fill="#ff69b4"/>
+  </g>
+</svg>
